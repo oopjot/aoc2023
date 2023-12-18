@@ -14,7 +14,7 @@
 (defn word-to-digit [w]
   (let [digit-words ["one" "two" "three" "four" "five" "six" "seven" "eight" "nine"]
         digit-map (into {} (map-indexed #(vector %2 (str (+ 1 %1))) digit-words))]
-       (or (get digit-map w) w)))
+    (or (get digit-map w) w)))
 
 (defn extract-digits-or-words [s] (map last (re-seq #"(?=(\d|one|two|three|four|five|six|seven|eight|nine))" s)))
 
